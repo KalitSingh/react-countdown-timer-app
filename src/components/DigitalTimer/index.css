@@ -1,0 +1,19 @@
+.app-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        #ffffff,
+        #cffcf1,
+        #cffcf1,
+        #defafe
+    );
+}
+.heading{
+    font-size: 2rem;
+    color: #0f172a;
+    font-family: "Roboto";
+    font-weight: 500;
+}
