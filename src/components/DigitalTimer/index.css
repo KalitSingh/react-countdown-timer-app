@@ -214,6 +214,6 @@
         #00d9f5
     );
 
-    /* for making un interactable */
+    /* for making uninteractable */
     pointer-events: none;
 }

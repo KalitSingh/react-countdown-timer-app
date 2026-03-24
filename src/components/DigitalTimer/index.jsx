@@ -43,7 +43,7 @@ class DigitalTimer extends Component {
             <div className="timer-limit-controller-container">
                 <button type="button" disabled={isButtonDisabled} onClick={this.onClickPlusIncre} className="timer-limit-button">+</button>
                 <div>
-                    <input readOnly className="timerLimitInputValue" value={timerLimitInMin} type="number" />
+                    <input readOnly className="timerLimitInputValue" value={timerLimitInMin} type="text" />
                 </div>
                 <button type="button" disabled={isMinusButtonDisabled} onClick={this.onClickMinusDecre} className="timer-limit-button">-</button>
             </div>
