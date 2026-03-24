@@ -176,6 +176,12 @@
 @media screen and (min-width: 768px){
 .timer-mimit-title{
         font-size: 26px;
+        margin-top: 15px;
+    }
+}
+@media screen and (min-width: 992px){
+.timer-mimit-title{
+        margin-top: 20px;
     }
 }
 .timer-limit-controller-container{
@@ -202,4 +208,9 @@
     text-align: center;
     border: none; 
     align-self: center;
+    background-image: linear-gradient( to top,
+        #b0f0e0,
+        #2beebd,
+        #00d9f5
+    );
 }
