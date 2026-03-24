@@ -41,11 +41,11 @@ class DigitalTimer extends Component {
             <>
             <p className="timer-mimit-title">Set Timer</p>
             <div className="timer-limit-controller-container">
-                <button disabled={isButtonDisabled} onClick={this.onClickPlusIncre} className="timer-limit-button">+</button>
+                <button type="button" disabled={isButtonDisabled} onClick={this.onClickPlusIncre} className="timer-limit-button">+</button>
                 <div>
                     <input className="timerLimitInputValue" value={timerLimitInMin} type="number" />
                 </div>
-                <button disabled={isMinusButtonDisabled} onClick={this.onClickMinusDecre} className="timer-limit-button">-</button>
+                <button type="button" disabled={isMinusButtonDisabled} onClick={this.onClickMinusDecre} className="timer-limit-button">-</button>
             </div>
             </>
         )
@@ -102,18 +102,22 @@ class DigitalTimer extends Component {
         ? "https://res.cloudinary.com/dkr51xeft/image/upload/v1774177879/react-projects/react-countdown-timer-app/play-icon-img_nai3pd.png" 
         : "https://res.cloudinary.com/dkr51xeft/image/upload/v1774177869/react-projects/react-countdown-timer-app/pause-icon-img_wtlzxf.png";
 
+        const startOrPauseAltAttribute = isTimerRunning ? "Pause icon" : "Start icon";
+
         return(
             <div className="timer-controller-container">
                 <button 
+                    type="button"
                     onClick={this.onStartOrPauseTimer}
                     className="timer-controller-btn">
-                    <img className="timer-controller-icon" src={startOrPauseImgUrl} />
+                    <img alt={startOrPauseAltAttribute} className="timer-controller-icon" src={startOrPauseImgUrl} />
                     <p className="timer-controller-label">{isTimerRunning ? "Pause" : "Start"}</p>
                 </button>
                 <button 
+                    type="button"
                     onClick={this.onResetTimer}
                     className="timer-controller-btn">
-                    <img className="timer-controller-icon" src="https://res.cloudinary.com/dkr51xeft/image/upload/v1774177891/react-projects/react-countdown-timer-app/reset-icon-img_mwtgkt.png" />
+                    <img alt="reset-icon" className="timer-controller-icon" src="https://res.cloudinary.com/dkr51xeft/image/upload/v1774177891/react-projects/react-countdown-timer-app/reset-icon-img_mwtgkt.png" />
                     <p className="timer-controller-label">Reset</p>
                 </button>
             </div>
