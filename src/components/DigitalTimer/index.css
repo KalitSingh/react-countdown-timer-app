@@ -17,3 +17,74 @@
     font-family: "Roboto";
     font-weight: 500;
 }
+.digital-timer-container{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+.timer-display-container{
+    background-image: url("https://res.cloudinary.com/dkr51xeft/image/upload/v1774177639/react-projects/react-countdown-timer-app/digital-timer-elapsed-bg_m9wqvh.png");
+    background-size: cover; 
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elapsed-time-container{
+    background-color: white;
+    width: 110px; 
+    height: 110px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.elapsed-time{
+    font-weight: bold; 
+    font-size: 28px;
+    color: #00d9f5;
+    margin: 0;
+}
+.timer-state{
+    font-size: 14px;
+    color: #1e293b;
+    margin-top: 6px;
+}
+.controls-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.timer-controller-container{
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+    width: 90%;
+
+} 
+.timer-controller-btn{
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none; 
+    outline: none; 
+    cursor: pointer;
+    width: 136px;
+    margin-right: 2px;
+}
+.timer-controller-icon{
+    height: 36px; 
+    width: 36px;
+    margin-right: 6px;
+}
+.timer-controller-label{
+    font-size: 1.4rem;
+    font-weight: bolder; 
+    color: #1e293b;
+    padding: 0;
+    margin: 0;
+}
