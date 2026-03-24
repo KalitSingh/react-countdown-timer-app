@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+    margin: 0;
     min-height: 100vh;
     background-image: linear-gradient(
         to bottom,
@@ -23,6 +26,20 @@
     align-items: center;
     width: 90%;
 }
+@media screen and (min-width: 768px){
+    .digital-timer-container{
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+    }
+}
+@media screen and (min-width: 992px){
+    .digital-timer-container{
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+    }
+}
 .timer-display-container{
     background-image: url("https://res.cloudinary.com/dkr51xeft/image/upload/v1774177639/react-projects/react-countdown-timer-app/digital-timer-elapsed-bg_m9wqvh.png");
     background-size: cover; 
@@ -32,6 +49,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media screen and (min-width: 768px){
+    .timer-display-container{
+        width: 360px;
+        height: 360px;
+    }
+}
+@media screen and (min-width: 992px){
+    .timer-display-container{
+        width: 430px;
+        height: 430px;
+    }
 }
 .elapsed-time-container{
     background-color: white;
@@ -43,29 +72,44 @@
     justify-content: center;
     align-items: center;
 }
+@media screen and (min-width: 768px){
+    .elapsed-time-container{
+        width: 160px;
+        height: 160px;
+    }
+}
 .elapsed-time{
-    font-weight: bold; 
+    font-weight: bolder; 
     font-size: 28px;
     color: #00d9f5;
     margin: 0;
 }
+@media screen and (min-width: 768px){
+    .elapsed-time{
+       font-size: 33px;
+    }
+}
 .timer-state{
     font-size: 14px;
+    font-weight: 500;
     color: #1e293b;
     margin-top: 6px;
+}
+@media screen and (min-width: 768px){
+    .timer-state{
+       font-size: 19px;
+       margin-top: 10px;
+    }
 }
 .controls-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 400px;
 }
 /* start/pause + reset button css */
 .timer-controller-container{
     display: flex;
-    justify-content: space-between;
-    /* gap: 20px; */
-    width: 90%;
-
 } 
 /* start/pause button css */
 .timer-controller-btn{
@@ -76,12 +120,37 @@
     outline: none; 
     cursor: pointer;
     width: 136px;
-    margin-right: 2px;
+    margin-right: 4px;
 }
+@media screen and (min-width: 768px){
+.timer-controller-btn{
+        margin-right: 14px;
+    }
+}
+@media screen and (min-width: 992px){
+.timer-controller-btn{
+        margin-right: 24px;
+    }
+}
+
 .timer-controller-icon{
-    height: 36px; 
-    width: 36px;
+    height: 40px; 
+    width: 40px;
     margin-right: 6px;
+}
+@media screen and (min-width: 768px){
+.timer-controller-icon{
+        height: 48px; 
+        width: 48px;
+        margin-right: 8px;
+    }
+}
+@media screen and (min-width: 992px){
+.timer-controller-icon{
+        height: 54px; 
+        width: 54px;
+        margin-right: 8px;
+    }
 }
 .timer-controller-label{
     font-size: 1.4rem;
@@ -90,12 +159,24 @@
     padding: 0;
     margin: 0;
 }
+@media screen and (min-width: 768px){
+.timer-controller-label{
+       font-size: 1.8rem;
+    }
+}
+
 /* Reset Button Css */
 .timer-mimit-title{
-    margin: 30px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     font-size: 22px;
     color: #479c8e;
     font-weight: bold;
+}
+@media screen and (min-width: 768px){
+.timer-mimit-title{
+        font-size: 26px;
+    }
 }
 .timer-limit-controller-container{
     display: flex;
