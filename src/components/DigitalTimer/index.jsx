@@ -28,7 +28,7 @@ class DigitalTimer extends Component {
         
     }
     
-    // + and - 
+    // + and - button controls
     renderTimerLimitController = () => {
         const {timerLimitInMin, isTimerRunning} = this.state 
         console.log(timerLimitInMin < 0)
@@ -43,7 +43,7 @@ class DigitalTimer extends Component {
             <div className="timer-limit-controller-container">
                 <button type="button" disabled={isButtonDisabled} onClick={this.onClickPlusIncre} className="timer-limit-button">+</button>
                 <div>
-                    <input className="timerLimitInputValue" value={timerLimitInMin} type="number" />
+                    <input readOnly className="timerLimitInputValue" value={timerLimitInMin} type="number" />
                 </div>
                 <button type="button" disabled={isMinusButtonDisabled} onClick={this.onClickMinusDecre} className="timer-limit-button">-</button>
             </div>
@@ -68,8 +68,6 @@ class DigitalTimer extends Component {
 
     // This is for - when reset button is clicked 
     onResetTimer = () => {
-        const {timerLimitInMin} = this.state
-
         clearInterval(this.timerId)
         this.setState({timerLimitInMin: 45, timeElapsedInSec: 0, isTimerRunning: false})
         

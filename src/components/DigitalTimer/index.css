@@ -213,4 +213,7 @@
         #2beebd,
         #00d9f5
     );
+
+    /* for making un interactable */
+    pointer-events: none;
 }
